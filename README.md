@@ -20,4 +20,4 @@
 
 <hr>
 
-<p>Notic : You have download a first Mysql and the Node js</p>
+<p>Notice : Make Sure You have already install  Mysql and the Node js</p>
