@@ -1,0 +1,66 @@
+<% layout("./layout/boiler") -%>
+<body>
+    <style>
+        
+    </style>
+  <main>
+    <% if ( typeof error !== 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+      <% } %>
+    <div class="extra_info">
+        <a href="http://localhost:8080/admin/employee"><h2 class="table_name"> Employee list</h2></a>
+        <div class="right">
+            <h2 class="total_count ">total count : <%=result.length%></h2>
+            <h2 class="create_new"><a href="/admin/employee/create">Create Employee</a></h2>
+            <form action="http://localhost:8080/admin/employee/search" method="post">
+                <label for="search">search</label>
+                <a href="http://localhost:8080/admin/employee"><i class="fa-solid fa-xmark"></i></a>
+                <input type="text" id="search" name="search" placeholder="Search Record" >
+            </form>
+        </div>
+    </div>
+   
+    <div class="table_data" >
+        <table>
+            <tr>
+                <th>Unique Id</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile no</th>
+                <th>Designation</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Created Date</th>
+                <th>Action</th>
+            </tr>
+
+            <% if (result.length === 0) { %>
+                <h3>Not Found</h3>
+            <% } %>
+            
+            <% for(let i=0; i<result.length;i++) {%>
+            <tr>
+                <td><%= result[i].id%></td>
+                <td><img src="<%=result[i].img_path %>" alt="user image"></td>
+                <td><%=(result[i].name) %></td>
+                <td><%=(result[i].email )%></td>
+                <td><%=result[i].mobile_no %></td>
+                <td><%=(result[i].designation) %></td>
+                <td><%=(result[i].gender )%></td>
+                <td><%=(result[i].course)%></td>
+                <td><%=(result[i].created_date.toDateString()) %></td>
+                <td><a href="http://localhost:8080/admin/employee/<%=result[i].id%>/edit">Edit</a>-<a href="http://localhost:8080/admin/employee/<%=result[i].id%>">Delete</a></td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</main>
+
+</body>
+    
+
+
+

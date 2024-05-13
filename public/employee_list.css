@@ -1,0 +1,97 @@
+/* Resetting default margin and padding */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.extra_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table_name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.total_count,
+.create_new {
+  margin-right: 20px;
+}
+
+.table_data {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Form styles */
+form {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 5px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+}
+
+/* Links styles */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu_items {
+    margin: 10px 0;
+  }
+
+  .extra_info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right {
+    margin-top: 10px;
+  }
+}
