@@ -2,7 +2,7 @@
 <h3>Admin Employee management</h3>
 <hr>
 <h1>To see output click on the following Video link</h1>
-<a href="https://drive.google.com/file/d/1bhMOmCJKZNEXUm7stNBc6EFVOSyYlPf6/view?usp=drive_link">Watch the output</a>
+<a href="https://drive.google.com/file/d/1bhMOmCJKZNEXUm7stNBc6EFVOSyYlPf6/view?usp=drive_link" target="__blank">Watch the output</a>
 <h2>Steps to Execute the Project</h2>
 
 <h3>Step: 1</h3>
