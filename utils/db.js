@@ -57,7 +57,7 @@ const insertLoginData = (username, password) => {
 };
 
 function displayEmployees(callback) {
-  const sql = "SELECT * FROM employee ORDER BY name, email, id, created_date";
+  const sql = "SELECT * FROM employee ORDER BY id, name, email, created_date";
   conn.query(sql, (err, result) => {
     if (err) {
       console.error(err);
