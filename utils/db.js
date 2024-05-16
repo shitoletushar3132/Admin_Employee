@@ -1,4 +1,5 @@
 const mysql = require("mysql");
+
 const conn = mysql.createConnection({
   host: "sql12.freesqldatabase.com",
   user: "sql12706929",
